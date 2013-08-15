@@ -1,18 +1,20 @@
 <%= form_for(@lead) do |f| %>
-  <% if @lead.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
+<% if @lead.errors.any? %>
+<div id="error_explanation" style="color: #fff; background-color: #d9534f; border-color: #d43f3a; border-radius:4px; padding: 5px; margin-bottom: 20px;">
+  <h4><%= pluralize(@lead.errors.count, "error") %> prohibited this lead from being saved:</h4>
+  <ul>
+    <% @lead.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
-      <ul>
-      <% @lead.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div class="well">
+  
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.submit %>
 
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-    <%= f.submit %>
-  <% end %>
+</div>
+<% end %>
