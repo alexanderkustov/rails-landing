@@ -1,4 +1,4 @@
-<%= form_for(@lead) do |f| %>
+<%= form_for(@lead)  do |f| %>
 <% if @lead.errors.any? %>
 <div id="error_explanation" style="color: #fff; background-color: #d9534f; border-color: #d43f3a; border-radius:4px; padding: 5px; margin-bottom: 20px;">
   <h4><%= pluralize(@lead.errors.count, "error") %> prohibited this lead from being saved:</h4>
@@ -10,11 +10,14 @@
 </div>
 <% end %>
 
-<div class="well">
+<div class="text-center">
   
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-  <%= f.submit %>
+<form class="form-inline" role="form">
+  <%= f.text_field :email, class: "form-control" %>
+
+  <%= button_tag(type: 'submit', class: "btn btn-default") do %>
+  Submit
+<% end %>
 
 </div>
 <% end %>
