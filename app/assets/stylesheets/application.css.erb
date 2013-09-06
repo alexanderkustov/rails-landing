@@ -1,19 +1,36 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the top of the
+* compiled file, but it's generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
 body{
-  background: #95a5a6 url('http://lorempixel.com/1280/720');
-  background-repeat: no-repeat;
-  background-size: cover;
+background: #23577f url('<%= image_path "wundt_bg.jpg" %>') top center no-repeat fixed;
+background-size: cover;
+font-family: 'PT Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+font-family: 'PT Sans', sans-serif;
+font-weight: 700;
+}
+.wtitle{
+color:white;
+letter-spacing: -1px;
+text-shadow: 0 1px 1px rgba(60, 60, 60, 0.61);
+text-rendering: optimizeLegibility;
+}
+.bwell{
+color:white;
+background: rgba(0,0,0,0.61);
+border: 1px solid #222;
+border-radius:4px;
+padding:15px;
+margin-top:15px;
 }
