@@ -11,7 +11,7 @@ set :branch, "master"
 set :use_sudo, true
 
 
-server "inspiring.cloudapp.net", :web, :app, :db, primary: true
+server "thewundtlab.cloudapp.net", :web, :app, :db, primary: true
 
 
 set :deploy_to, "/home/#{user}/apps/#{application}"
